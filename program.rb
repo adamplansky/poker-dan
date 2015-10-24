@@ -3,7 +3,7 @@ def get_games(file_name, nickname)
   #line_cnt = 0
   File.open(File.dirname(__FILE__) + '/' + file_name, 'r').each_line do |line|
     hand_text += line
-    if line == "\r\n" || line == '\n'
+    if line == "\r\n" || line == "\n"
       puts hand_text if hand_text.include? nickname
       hand_text = ""
     end
